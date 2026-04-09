@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<title>Guess Who ? 🦲</title>
+<title>Guess Who 🦲</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#03243D;--cardbg:#041824;--c1:#24b1d9;--c2:#921b8e;--c3:#00ccff;--c4:#ff1ee1;--text:#f0f0f0;--muted:#4a7a96;--ok:#2ecc71;--ko:#e74c3c;}
@@ -151,7 +151,7 @@ body{display:flex;flex-direction:column;align-items:center;
 <body>
 
 <div id="splash">
-  <div class="sp-t">Guess Who ?</div>
+  <div class="sp-t">Guess Who</div>
   <div class="sp-s">Can you recognise a skull?</div>
   <div class="sp-sk">🦲</div>
   <div class="rules">
@@ -166,7 +166,7 @@ body{display:flex;flex-direction:column;align-items:center;
 </div>
 
 <div id="hdr">
-  <div class="htt">Guess Who ?</div>
+  <div class="htt">Guess Who</div>
   <div class="pills">
     <div class="pill">✅&nbsp;<b id="sg">0</b></div>
     <div class="pill">❌&nbsp;<b id="sb">0</b></div>
@@ -403,9 +403,9 @@ function showEnd(){
 function shareScore(){
   const r=good/TOTAL;
   const stars=r===1?'⭐⭐⭐':r>=.8?'⭐⭐⭐':r>=.6?'⭐⭐':r>=.4?'⭐':'💀';
-  const text=`Guess Who ? — I scored ${good}/${TOTAL} ${stars}\nCan you beat me? 🦲`;
+  const text=`Guess Who — I scored ${good}/${TOTAL} ${stars}\nCan you beat me? 🦲`;
   if(navigator.share){
-    navigator.share({title:'Guess Who ?',text}).catch(()=>{});
+    navigator.share({title:'Guess Who',text}).catch(()=>{});
   } else {
     navigator.clipboard.writeText(text).then(()=>alert('Score copied to clipboard!')).catch(()=>alert(text));
   }
